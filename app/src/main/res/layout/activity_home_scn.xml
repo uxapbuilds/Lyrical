@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScn">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/hontana"
+        android:gravity="center"
+        android:text="Lyrical"
+        android:textColor="#212121"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtArtistName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/brand"
+        android:gravity="center"
+        android:hint="@string/hint_artist"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:gravity="center"
+        android:id="@+id/edtSongName"
+        android:fontFamily="@font/brand"
+        android:textStyle="bold"
+        android:hint="@string/hint_song_name"
+        android:maxLines="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="464dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtArtistName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imgSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#212121"
+        android:onClick="onClickSearch"
+        android:padding="7dp"
+        android:src="@drawable/ic_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSongName"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLyrics"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="25dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSongName"
+        android:visibility="gone">
+
+        <ScrollView
+            android:id="@+id/scvLyricalView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:padding="20dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/txtLyricsView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/brand"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="Turn your magic on, Umi she'd say\r\nEverything you want's a dream away\r\nWe are legends, every day\r\nThat's what she told me\r\nTurn your magic on, to me she'd say\n\nEverything you want's a dream away\n\nUnder this pressure, under this weight\n\nWe are diamonds \n\n\n\nI feel my heart beating\n\nI feel my heart underneath my skin\n\nI feel my heart beating\n\nOh, you make me feel\n\nLike I'm alive again\n\n\n\nAlive again!\n\n\n\nOh, you make me feel\n\nLike I'm alive again\n\n\n\nSaid I can't go on, not in this way\n\nI'm a dream that died by light of day\n\nGonna hold up half the sky and say\n\nOnly I own me\n\n\n\nI feel my heart beating\n\nI feel my heart underneath my skin\n\nOh, I can feel my heart beating\n\n'Cause you make me feel\n\nLike I'm alive again\n\n\n\nAlive again!\n\n\n\nOh, you make me feel\n\nLike I'm alive again\n\n\n\nTurn your magic on, Umi she'd say\n\nEverything you want's a dream away\n\nUnder this pressure, under this weight\n\nWe are diamonds taking shape\n\nWe are diamonds taking shape\n\n\n\n(Woo, woo)\n\n\n\nIf we've only got this life\n\nThis adventure, oh then I\n\nAnd if we've only got this life\n\nYou'll get me through alive\n\nAnd if we've only got this life\n\nIn this adventure, oh then I\n\nWanna share it with you\n\nWith you, with you\n\nI said, oh, say oh\n\n\n\n(Woo hoo, woo hoo...)"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
