@@ -1,5 +1,10 @@
 package com.uxap.lyrical;
-
+/*
+*
+* //////////////////////////// Built By UXAP. ///////////////////////////////
+*
+*
+* */
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
